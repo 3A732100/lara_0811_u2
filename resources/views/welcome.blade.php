@@ -81,6 +81,9 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                                    <a href="{{route('hello.index')}}">Hello</a>
+                                    <a href="/hello/Tom" >Hello2</a>
+                                    <a href="{{route('hello.index', ['name'=>'Tom'])}}" > Hello3</a>
                                     Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
                                 </div>
                             </div>
