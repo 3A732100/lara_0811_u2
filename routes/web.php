@@ -18,5 +18,11 @@ use Illuminate\Support\Facades\Route;
 //練習1. (1)
 //Route::get('/',function(){return'welcome';});
 
-Route::get('r1', function(){ return redirect('r2'); });
-Route::get('r2', function(){ return view('welcome'); });
+//練習1. (3)
+//Route::get('r1', function(){ return redirect('r2'); });
+//Route::get('r2', function(){ return view('welcome'); });
+
+Route::get('hello/{name}',function($name){
+    return'Hello,'.$name;
+});
+
