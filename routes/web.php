@@ -28,8 +28,19 @@ Route::get('/',function(){return view('welcome');});
 //練習2. (3)
 //Route::get('hello/{name?}',function($name='Everybody'){return'Hello,'.$name;});
 
+//練習4
 Route::get('hello/{name?}',function($name='Everybody'){
     return 'Hello, '.$name;
 })->name('hello.index');
 
+//練習5
+Route::get('dashboard',function(){
+    return'dashboard';
+});
 
+//練習5
+Route::group(['prefix'=>'admin'],function(){
+    Route::get('dashboard',function(){
+        return'admin dashboard';
+    });
+});
