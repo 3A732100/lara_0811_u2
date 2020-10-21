@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //原route
-//Route::get('/',function(){returnview('welcome');});
+Route::get('/',function(){return view('welcome');});
 
 //練習1. (1)
-//Route::get('/',function(){return'welcome';});
+//Route::get('/',function(){return 'welcome';});
 
 //練習1. (3)
 //Route::get('r1', function(){ return redirect('r2'); });
@@ -28,6 +28,8 @@ use Illuminate\Support\Facades\Route;
 //練習2. (3)
 //Route::get('hello/{name?}',function($name='Everybody'){return'Hello,'.$name;});
 
-Route::get('hello/{name?}', function ($name='Everybody') {
+Route::get('hello/{name?}',function($name='Everybody'){
     return 'Hello, '.$name;
 })->name('hello.index');
+
+
